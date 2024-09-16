@@ -1,0 +1,15 @@
+class asciiPyramid { //declaring class
+    public static void main(String[] args) { //declaring method
+        System.out.println("\n         / \\ ."); //each println prints a new line
+        System.out.println("\n        /   \\  .");
+        System.out.println("\n       /     \\   .");
+        System.out.println("\n      /       \\    .");
+        System.out.println("\n     /         \\    |");
+        System.out.println("\n    /           \\   |");
+        System.out.println("\n   /             \\  |");
+        System.out.println("\n  / Hello There...\\ | ");
+        System.out.println("\n /_________________\\| ");
+        System.out.println("\n ");
+        System.out.println("\n    ...And Welcome!");
+    } //end of method
+} //end of class
