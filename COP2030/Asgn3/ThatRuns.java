@@ -1,3 +1,5 @@
+/*would use packages but for sumbission reasons I just
+included the methods in the main script*/
 import java.util.Scanner;
 
 public class ThatRuns{
