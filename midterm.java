@@ -3,19 +3,21 @@ import java.util.Arrays;
 
 public class midterm{ //main class
     public static void main(String [] args){
+
         Scanner readString = new Scanner(System.in); //create scanner object
         System.out.println("\nYour String:TO QUIT-<ctrl d>(UNIX)/<ctrl z>(Windows)>\n"); //prompt input
 
         mainloop:
-        while(readString.hasNextLine()){ //checks if user uses <crtl + z> command
+        while(readString.hasNextLine()){ //checks if user uses <crtl> command
+            
             String myString = readString.nextLine(); //assign input to variable
 
             double vowels = 0, characters = myString.length(); //initialize variables
-            double a=0, e=0, i=0, o=0, u=0;
+            double a=0, e=0, i=0, o=0, u=0;                    //double for probabilities
             
-            while(characters == 0){ //restarts mainloop if nothing is inputted
+            if(characters==0){ //restarts mainloop if nothing is inputted
                 System.out.println("Empty string!");
-                System.out.print("\nYour String:TO QUIT-<ctrl d>(UNIX)/<ctrl z>(Windows)>\n");
+                System.out.println("\nYour String:TO QUIT-<ctrl d>(UNIX)/<ctrl z>(Windows)>\n");
                 continue mainloop;
             }
 
@@ -40,7 +42,7 @@ public class midterm{ //main class
 
             if(vowels==0){ //restarts mainloop if there are no vowels 
                 System.out.println("Vowels - Defieicent Language!");
-                System.out.print("\nYour String:TO QUIT-<ctrl d>(UNIX)/<ctrl z>(Windows)>\n");
+                System.out.println("\nYour String:TO QUIT-<ctrl d>(UNIX)/<ctrl z>(Windows)>\n");
                 continue mainloop;
             }
 
@@ -60,7 +62,7 @@ public class midterm{ //main class
             double proba=a/characters, probe=e/characters, probi=i/characters, probo=o/characters, probu=u/characters;
 
             //printing probabilities 
-            if(probTotal == 1){//if all characters are vowels
+            if(probTotal==1){ //if all characters are vowels
                 System.out.print("Probability of finding a vowel at random is: 1... Must be talking crazy!");
                 } else {
                     System.out.print("Probability of finding a vowel at random : ");
@@ -128,13 +130,13 @@ public class midterm{ //main class
                 
             for(double k=max; k>0; k--){ //determines if position has '*' or ' '
                 for (double num:vert){
-                    if(num >= k){
+                    if(num>=k){
                         System.out.print("* ");
                     } else {
                         System.out.print("  ");
                     }
                 }
-                System.out.println(); //new column
+                System.out.println(); //new row
             }
             System.out.println("_________");
             System.out.println("a e i o u");
@@ -142,11 +144,7 @@ public class midterm{ //main class
 
             System.out.println("\nYour String:TO QUIT-<ctrl d>(UNIX)/<ctrl z>(Windows)>\n");
         }
-        readString.close();//closing scanner
-        System.out.println("Normal Termination!");//program ends if <ctrl + z> is inputted 
+        readString.close(); //closing scanner
+        System.out.println("Normal Termination!"); //program ends if <ctrl> command is inputted 
     }        
 }
-
-       
-    
-
