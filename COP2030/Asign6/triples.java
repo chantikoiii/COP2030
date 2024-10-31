@@ -25,7 +25,7 @@ public class triples{
 
                         if(c<=pythTrip && a*a + b*b == c*c){ // checks if 'a,b,c' are pythagorean triples
                             if(b+1==c && a+1==b){
-                                System.out.println("\t\t("+a+"," +b+"," +c+")");
+                                System.out.println("\t\t\t("+a+"," +b+"," +c+")");
                                 cat3++;
                             } else if(b+1==c){
                                 System.out.println("\t("+a+"," +b+"," +c+")");
