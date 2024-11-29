@@ -7,7 +7,7 @@ import java.io.IOException;
 public class psuedo{
     public static void main(String [] args) throws FileNotFoundException {
 
-        File file = new File("D:/USF FALL 2024/COP2030/Asign7/test.txt");
+        File file = new File("your/directory/here");
 
         FileReader readMe = new FileReader(file);
         BufferedReader bufferedReadMe = new BufferedReader(readMe);
