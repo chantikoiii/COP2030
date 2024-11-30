@@ -1,0 +1,32 @@
+java.io.File;
+This File class provides a mechanism to interact with files and directories.
+
+java.io.FileReader;
+This class passes a text file as an object, and the 'read()' method works in tandem to output one character at a time. An integer is outputted to represent a character and an output of -1 signifies the end of a document.
+
+java.io.BufferedReader;
+This class allows for a reserved chunk of memory for temporary data storage (.i.e. a 'buffer'). Wrapping a 'FileReader' object with a buffer allows files to be read line-by-line instead of one character at a time, boosting program efficiency. Instead of using 'read()' this method uses 'readLine()' to output text, and a NULL value is returned when the end of a document is reached.
+
+java.io.IOException;
+This class handles exceptions from Input/Output errors
+
+Incorporating the mentioned libraries, I wrote a program that takes a text file and outputs its contents. The 'File' class allows the program to interact with files. The 'readMe' FileReader object is wrapped with a BufferedReader to optimize string input/output. Finally, any I/O exceptions caught by the program is handled through a try-catch loop, with the 'throws IOException' clause passing any errors through.
+
+Here is a snippet of the script that facilitates input/output capabilities:
+
+//declaring file as object
+File file = new File("C:/user/folder/text.txt");
+
+//reads the text file one character at a time
+FileReader readMe = new FileReader(file);
+
+//wrapping 'readMe' with a BufferedReader will allow file to be read one line at a time
+BufferedReader bufferedReadMe = new BufferedReader(readMe);
+
+//the 'line' object stores each line of text from the file until it reaches the end
+//determined by the '!= null' argument within the while loop
+String line;
+
+while((line = bufferedReadMe.readLine()) != null){
+	System.out.println(line);
+}
